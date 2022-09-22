@@ -1,0 +1,109 @@
+<%- include('../partials/head.ejs')%>
+    <%- include('../partials/navbar.ejs')%>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 vh-100 col-3 ">
+
+            <!-- Brand Logo -->
+            <a href="/" class="brand-link">
+                <img src="/img/logopm.jpeg" alt="logoPmpe" class="brand-image img-circle elevation-6"
+                    style="opacity: .8;">
+                <span class="brand-text font-weight-light">RMB</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="" class="img-circle elevation-2" alt="">
+                    </div>
+                    <div class="text-right col-11">
+                        <h6><a class="fa fa-cogs" href="/users/logout"> Sair</a></h6>
+                    </div>
+
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="sidebar-search">
+                        <div>
+                            <% if (typeof errors !='undefined' ) { %>
+                                <% errors.forEach(error=> { %>
+                                    <div class="alert alert-danger">
+                                        <%= error.message %>
+                                    </div>
+                                    <% }) %>
+                                        <% } %>
+                        </div>
+                        <!-- <div>
+
+                            <form method="POST" action="/contatos/matricula">
+                                <div class="input-group">
+
+                                    <input type="search" class="form-control search-menu" placeholder="Matrícula..."
+                                        required name="matricula">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-danger"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> -->
+
+                    </div>
+                    </form>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="">
+                            <a href="#" class="nav-link active ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    RMB
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-folder "></i>
+                                <p>
+                                    Armas
+                                    <i class="fas fa-angle-left right"></i>
+                                    <!-- <span class="badge badge-info right">6</span> -->
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/armasRouter/armas" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lista de Armas</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Usuários
+                                    <i class="fas fa-angle-left right"></i>
+                                    <!-- <span class="badge badge-info right">6</span> -->
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/usuarios/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Users</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+            <%- include('../partials/cdn.ejs')%>
+
+        </aside>

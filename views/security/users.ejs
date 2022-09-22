@@ -1,0 +1,90 @@
+<%- include('../partials/head.ejs')%>
+
+
+
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <!-- 
+  <------navbar-------->
+
+            <!-- end navbar -->
+
+            <%- include('../partials/aside.ejs')%>
+
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+                    <!-- Content Header (Page header) -->
+                    <div class="content-header">
+
+                        <!-- /.content-header -->
+                        <!-- Main content -->
+                        <section class="content">
+                            <div class="container-fluid">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="form-group-inline">
+                                            <div class="float-left">
+                                                <h5>Cadastrar usuários</h5>
+                                            </div>
+                                            <div class="float-right">
+                                                <nav class="navbar navbar-light bg-light navbar-sm">
+                                                    <form method="POST" action="/getUser">
+                                                    <div class="form-inline">
+                                                        <input class="form-control mr-sm-2" type="search"
+                                                            placeholder="Pesquisar..." aria-label="Pesquisar">
+                                                        <button class="btn btn-outline-success my-2 my-sm-0"
+                                                            type="submit">Pesquisar Militar</button>
+                                                    </form>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body>">
+                                        <div class="container-fluid">
+                                            <div class="form-group-inline">
+                                                Nome:
+                                                <input class="form-control" disabled>
+                                                Matrícula:
+                                                <input class="form-control form-control-sm" disabled>
+                                                tipo:
+                                                <select class="form-control form-control-sm">
+                                                    <option></option>
+                                                    <option value="1">Administrador</option>
+                                                    <option value="2">Usuário</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="btn btn-outline-success">Salvar</button>
+                                        </div>
+                                    </div>
+
+                        </section>
+                        <!-- right col -->
+                    </div>
+                    <!-- /.row (main row) -->
+                </div><!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Dtec:RMB<a href="/contatos/index"></a></strong>
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+        </div>
+
+        <!-- ./wrapper -->
+
+        <!-- jQuery -->
+
+    </body>
+
+    </html>

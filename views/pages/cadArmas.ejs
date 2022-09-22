@@ -1,0 +1,106 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/navbar.ejs') %>
+
+        <body>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Cadastro de Armas</h5>
+
+
+                </div>
+                <div class="card-body">
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="form-group col-2">
+                                <label>Numeração</label>
+                                <form method="POST" action="/armasRouter/insertArmas">
+                                    <input class="form-control" type="text" name="numeracao"></input>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleFormControlSelect1">Especie</label>
+                                <select class="form-control" name="especie">
+
+                                    <% especies.forEach(especie=>{ %>
+                                        <option value=" <%= especie.id_especie %>">
+                                            <%= especie.descricao %>
+                                        </option>
+                                        <% }) %>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleFormControlSelect1">Calibre</label>
+                                <select class="form-control" name="calibre">
+
+                                    <% datas.forEach(data=>{ %>
+                                        <option value="<%= data.id_calibre %>">
+                                            <%= data.descricao %>
+                                        </option>
+                                        <% }) %>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleFormControlSelect1">Marca</label>
+                                <select class="form-control" name="marca">
+
+                                    <% marcas.forEach(marca=>{ %>
+                                        <option value="<%= marca.id_marca %>">
+                                            <%= marca.descricao %>
+                                        </option>
+                                        <% }) %>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleFormControlSelect1">Modelo</label>
+                                <select class="form-control" name="mode">
+
+                                    <% modes.forEach(mode=>{ %>
+                                        <option value="<%= mode.id_modelo %>">
+                                            <%= mode.descricao %>
+                                        </option>
+                                        <% }) %>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleFormControlSelect1">OME</label>
+                                <select class="form-control" name="ome">
+
+                                    <% omes.forEach(ome=>{ %>
+                                        <option value="<%= ome.id_organizacao %>">
+                                            <%= ome.sigla %>
+                                        </option>
+                                        <% }) %>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleFormControlSelect1">Status</label>
+                                <select class="form-control" name="statu">
+
+                                    <% status.forEach(statu=>{ %>
+                                        <option value="<%= statu.id_status %>">
+                                            <%= statu.descricao %>
+                                        </option>
+                                        <% }) %>
+
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="card-footer">
+                    <button class="btn btn-success" type="">Salvar</button>
+                </div>
+                </form>
+
+            </div>
+           
+        </body>

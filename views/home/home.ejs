@@ -1,0 +1,141 @@
+<%- include('../partials/head.ejs')%>
+
+    <head>
+        <script>
+            let dayName = new Array(
+                "domingo",
+                "segunda",
+                "terça",
+                "quarta",
+                "quinta",
+                "sexta",
+                "sabado"
+            );
+            let monName = new Array(
+                "janeiro",
+                "fevereiro",
+                "março",
+                "maio",
+                "junho",
+                "julho",
+                "agosto",
+                "setembro",
+                "outubro",
+                "novembro",
+                "dezembro"
+            );
+            let now = new Date();
+        </script>
+    </head>
+
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <!-- 
+  <------navbar-------->
+
+            <!-- end navbar -->
+
+            <%- include('../partials/aside.ejs')%>
+
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+                    <!-- Content Header (Page header) -->
+                    <div class="content-header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-4">
+                                    <script>
+                                        document.write(" Hoje é " + dayName[now.getDay()] + " , " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear() + ".   ")
+                                    </script>
+
+                                </div>
+                                <div class="col-8">
+                                    <p class="text-danger float-right">
+                                    </p>
+                                </div>
+
+                            </div><!-- /.col -->
+
+                        </div><!-- /.row -->
+
+                    </div>
+                    <!-- /.content-header -->
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="container-fluid">
+                            <!-- Small boxes (Stat box) -->
+                            <div class="row">
+                                <div class="col-lg-2 col-8">
+                                    <!-- small box -->
+                                    <div class="small-box bg-info h-auto">
+                                        <div class="inner">
+                                            <p>Armas RMB</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-folder"></i>
+                                        </div>
+                                        <a href="/armasRouter/armas" class="small-box-footer">Armas<i
+                                                class="fa fa-address-book-o"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-8">
+                                    <!-- small box -->
+                                    <div class="small-box bg-success h-auto">
+                                        <div class="inner">
+                                            <p>Armas RMB</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                        <a href="/armasRouter/cadArmas" class="small-box-footer">Adicionar Armas <i
+                                                class="fa fa-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-8">
+                                    <!-- small box -->
+                                    <div class="small-box bg-warning h-auto">
+                                        <div class="inner">
+                                            <p>Armas RMB</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <a href="/contatos/getAllEv" class="small-box-footer">Usuários <i
+                                                class="fa fa-plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Main row -->
+                                <div class="row">
+                                    <!-- Left col -->
+                                    <section class="container-fluid col-10">
+                                </div>
+                                <!-- /.card -->
+                    </section>
+                    <!-- right col -->
+                </div>
+                <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Dtec:RMB<a href="/contatos/index"></a></strong>
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+        </div>
+
+        <!-- ./wrapper -->
+
+        <!-- jQuery -->
+
+    </body>
+
+    </html>

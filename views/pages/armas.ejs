@@ -1,0 +1,150 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <body class="hold-transition sidebar-mini layout-fixed">
+            <div class="wrapper">
+                <!-- 
+      <------navbar-------->
+
+                <!-- end navbar -->
+
+                <%- include('../partials/aside.ejs')%>
+
+                    <!-- Content Wrapper. Contains page content -->
+                    <div class="content-wrapper">
+                        <!-- Content Header (Page header) -->
+
+                        <section class="content">
+                            <div class="container">
+                                <!-- Small boxes (Stat box) -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="form-group-inline">
+                                            <div class="float-left">
+                                                <h5>ARMAS</h5>(<%= armas.length %>)
+                                            </div>
+                                            <div class="float-right">
+                                                <nav class="navbar navbar-light bg-light navbar-sm">
+                                                  
+                                                    <form class="form-inline">
+                                                        <input class="form-control mr-sm-2" type="search"
+                                                            placeholder="Pesquisar..." aria-label="Pesquisar">
+                                                        <button class="btn btn-outline-success my-2 my-sm-0"
+                                                            type="submit">Pesquisar</button>
+                                                    </form>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container-fluid col-12">
+                                            <table class="table table-hover table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>NUMERAÇÃO</th>
+                                                        <th>ESPECIE</th>
+                                                        <th>CALIBRE</th>
+                                                        <th>MARCA</th>
+                                                        <th>MODELO</th>
+                                                        <th class="col-1">OME</th>
+                                                        <th>STATUS</th>
+                                                        <th>DATA</th>
+                                                        <th>AÇÃO</th>
+                                                    </tr>
+                                                </thead>
+                                                <% armas.forEach(arma=> { %>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <%= arma.numeracao %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.te_descricao %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.tc_descricao %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.tm_descricao %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.tmo_descricao %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.og_sigla %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.ts_descricao %>
+                                                            </td>
+                                                            <td>
+                                                                <%= arma.atualizacao %>
+                                                            </td>
+                                                            <td> <a href="/armasRouter/getId" class="fa fa-edit"></a>|<a href="#"
+                                                                    class="fa fa-trash"></a></td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                    <% }) %>
+
+                                            </table>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <!-- /.card -->
+                        </section>
+                        <!-- right col -->
+                    </div>
+                    <!-- /.row (main row) -->
+            </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <nav aria-label="..." class="justify-center">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a href="#" class="page-link">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active">
+                            <span class="page-link">
+                                2
+                                <span class="sr-only">(atual)</span>
+                            </span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próximo</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+
+                </div>
+            </footer>
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+            </div>
+
+            <!-- ./wrapper -->
+
+            <!-- jQuery -->
+
+        </body>
+
+
+
+        <!-- **************************************************************************************************** -->
